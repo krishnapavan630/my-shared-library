@@ -4,7 +4,7 @@ def call(Map config) {
         error "mavenPipeline: Both gitURL and tomcat payload URL are required"
     }
     
-    def branchName  = config.branch        ?: 'main'
+    def branchName  = config.branchName        ?: 'main'
     def buildCmd    = config.buildCmd      ?: 'mvn clean install'
     def mavenTool   = config.mavenTool     ?: 'mymaven'
     def shouldDeploy = config.deploy != false
