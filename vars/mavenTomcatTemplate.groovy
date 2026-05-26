@@ -19,7 +19,7 @@ def call(Map config) {
         stages {
             stage('SCM Checkout') {
                 steps {
-                    gitRepo(config.gitUrl, branchName)
+                    getRepo(config.gitUrl, branchName)
                 }
             }
             
